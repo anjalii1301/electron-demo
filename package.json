@@ -1,0 +1,41 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "electron app demo",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anjalii1301/electron-demo.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "electron-builder build --mac --win --publish never",
+    "deploy": "electron-builder build --mac --win --publish always"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^32.1.2",
+    "electron-builder": "^25.0.5"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.4"
+  },
+  "build": {
+    "appId": "com.electron-demo",
+    "productName": "ElectronAutoUpdateExample",
+    "mac": {
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "anjalii1301",
+      "repo": "electron-demo",
+      "private": false
+    }
+  }
+}
